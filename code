@@ -1,0 +1,27 @@
+#define MQ2 A0
+#define Buzzer 8
+#define LED 7
+
+void setup() {
+  pinMode(MQ2, INPUT);
+  pinMode(Buzzer, OUTPUT);
+  pinMode(LED, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int gasLevel = analogRead(MQ2);
+  Serial.print("Gas Level: ");
+  Serial.println(gasLevel);
+
+  if (gasLevel > 400) { // Threshold level
+    digitalWrite(Buzzer, HIGH);
+    digitalWrite(LED, HIGH);
+    Serial.println("Gas Leakage Detected!");
+  } else {
+    digitalWrite(Buzzer, LOW);
+    digitalWrite(LED, LOW);
+  }
+
+  delay(1000);
+}
