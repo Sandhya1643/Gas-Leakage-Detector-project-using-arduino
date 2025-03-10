@@ -25,11 +25,14 @@ Relay Module – Controls exhaust fan or valve
 Power Supply – 5V/9V battery or adapter
 
 
+
 IoT Integration (Optional)
 
 
 Wi-Fi Alerts (ESP8266 + Firebase/MQTT)
+
 SMS Alerts (SIM800L GSM Module)
+
 Mobile App (Blynk for remote monitoring)
 
 
